@@ -11,9 +11,9 @@ ob_start();
         <title>Ajout produit</title>
     </head>
     <body>
-        
+    
         <div class=divTable>
-            <div>
+            <div class=divForm>
                 <h1>Ajouter un produit</h1>
                 <form action="traitement.php?action=add" method="post">
                     <p>

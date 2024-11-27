@@ -1,3 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-image: url("content/pokecenter\ BG.jpg");
+    color: white;
+}
+
+nav{
+    background-color: #646464;
+    vertical-align: top;
+    margin-bottom: 2em;
+}
+
 a:hover{
     color: rgb(3, 212, 3);
 }
@@ -7,10 +24,23 @@ a{
     color: white;
 }
 
+form, p{
+    padding: 0.5em; 
+    justify-content: space-between;
+}
+
 .divTable{
     display: flex;
     justify-content: space-around;
     text-align:center;
+    
+}
+
+.divForm{
+    background-color: #646464;
+    /* opacity: ; */
+    border-radius: 25px;
+    border: solid black;
 }
 
 .recap, .index{
@@ -22,9 +52,4 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-html{
-    background-color: grey;
-    color: white;
 }

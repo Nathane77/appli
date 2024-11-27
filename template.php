@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    
     <?php include_once 'fonctions.php'?>
         <nav class="nav">
             <div class="recap"><a href="recap.php">Recap </a><?=countQtt()?></div>
