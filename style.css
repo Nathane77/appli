@@ -1,3 +1,29 @@
+a:hover{
+    color: rgb(3, 212, 3);
+}
+
+a{
+    text-decoration:none;
+    color: white;
+}
+
+.divTable{
+    display: flex;
+    justify-content: space-around;
+    text-align:center;
+}
+
+.recap, .index{
+    width:4em;
+    margin:1em 20%;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 html{
     background-color: grey;
     color: white;
