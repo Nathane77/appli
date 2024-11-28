@@ -34,7 +34,9 @@ if(isset($_GET['action'])){
                     }
                 }
             header("Location:index.php");
+            die;
             break;
+
         case "delete":
             if (isset($_GET["id"])) {
 
@@ -47,13 +49,15 @@ if(isset($_GET['action'])){
                     $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Produit supprimé</p></div>";
                     die;
             }
+            die;
             break;
+            
         case "clear":
             unset($_SESSION['products']);
 
             header("Location:index.php");
 
-            $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Recap Vidé.</p></div>";
+            $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-success'>Recap vidé.</p></div>";
             die;
             break;
 
@@ -66,9 +70,9 @@ if(isset($_GET['action'])){
             $_SESSION['products'][$index]['qtt']++;
 
                 header("Location:recap.php");
-            break;
-            die;
-         
+                die;
+                break;
+           
         } 
             case "down-qtt":
                 if (isset($_GET["id"])) {
@@ -81,6 +85,7 @@ if(isset($_GET['action'])){
 
                         header("Location:recap.php");
                         
+                        
                         if($_SESSION['products'][$index]['qtt'] <= 0 && isset($_GET["id"])){
                                 $index = $_GET["id"];
                                                 
@@ -88,17 +93,14 @@ if(isset($_GET['action'])){
                                 
                                 header("Location:recap.php");
 
-                                $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Produit supprimé</p></div>";
+                                $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-success'>Produit supprimé</p></div>";
                                 die;
+                                break;
                 }
-                else{
-                    $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-danger'>Vous n'avez aucun items a supprimer</p></div>";
-                }
-                break; 
-        
+                die;
             }
         }
     }
 }
 
-// header("Location:index.php");
+header("Location:index.php");

@@ -14,7 +14,7 @@
     <?php 
     //ajouter un affichage dans les cas ou le tableau est vide
     if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
-        echo "<p>Aucun produit en session...</p>";
+        $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-danger'>Aucun produit en session.</p></div>";
     }
     else{
         echo 
