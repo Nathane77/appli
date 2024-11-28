@@ -1,7 +1,14 @@
 *{
     margin: 0;
-    padding: 0;
-    
+    padding: 0;  
+}
+
+
+p.alert{
+    display: flex;
+    justify-content: center;
+    background-color: #646464;
+    width: 314px;
 }
 
 body{
