@@ -25,11 +25,11 @@ if(isset($_GET['action'])){
                         //envoie notre tableau de produit a la session de l'utilisateur
                         $_SESSION["products"][] = $product;
 
-                        $_SESSION["alert"] = "<p class='alert alert-success'>Produit ajouté au recape.</p>";
+                        $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-success'>Produit ajouté au recape.</p></div>";
 
                     } 
                     else {
-                        $_SESSION["alert"] = "<p class='alert alert-danger'>Une erreur est survenue.</p>";
+                        $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-danger'>Une erreur est survenue.</p></div>";
                         header("Location:index.php");
                     }
                 }
@@ -44,7 +44,7 @@ if(isset($_GET['action'])){
                     
                     header("Location:recap.php");
 
-                    $_SESSION["alert"] = "<p class='alert-success text-center'>Produit supprimé</p>";
+                    $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Produit supprimé</p></div>";
                     die;
             }
             break;
@@ -53,7 +53,7 @@ if(isset($_GET['action'])){
 
             header("Location:index.php");
 
-            $_SESSION["alert"] = "<p class='alert-success text-center'>Recap Vidé.</p>";
+            $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Recap Vidé.</p></div>";
             die;
             break;
 
@@ -88,11 +88,11 @@ if(isset($_GET['action'])){
                                 
                                 header("Location:recap.php");
 
-                                $_SESSION["alert"] = "<p class='alert-success text-center'>Produit supprimé</p>";
+                                $_SESSION["alert"] = "<div class='divAlert'><p class='alert-success text-center'>Produit supprimé</p></div>";
                                 die;
                 }
                 else{
-                    echo "Vous n'avez aucun items a supprimer";
+                    $_SESSION["alert"] = "<div class='divAlert'><p class='alert alert-danger'>Vous n'avez aucun items a supprimer</p></div>";
                 }
                 break; 
         
