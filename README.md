@@ -46,6 +46,6 @@ if(isset($_GET['action'])){
 Otherwise, if the user's input is wrong, it will ignore everything and return `'alert alert-danger'` to inform the user of what happened.
 
 ## **On the side**
-This was also a chance to try out **[bootstrap](https://getbootstrap.com)** for the CSS, mostly used on the table in the recap page.
+This was also a chance to try out **[bootstrap](https://getbootstrap.com)** for the CSS, mostly used on the table in the recap page, and the errors.
 
 ## **if you have question about the project you can contact me on my [linkedIn](https://www.linkedin.com/in/nassim-hammoudi-8a5235334/)**
